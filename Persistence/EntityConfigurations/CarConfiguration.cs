@@ -13,8 +13,14 @@ public class CarConfiguration : IEntityTypeConfiguration<Car>
         builder.Property(b => b.Id).HasColumnName("Id").IsRequired();
         builder.Property(b => b.ModelId).HasColumnName("ModelId").IsRequired();
         builder.Property(b => b.Kilometer).HasColumnName("Kilometer").IsRequired();
-        builder.Property(b => b.CarState).HasColumnName("State");
-        builder.Property(b => b.ModelYear).HasColumnName("ModelYear");
+        builder.Property(b => b.CarState).HasColumnName("State").IsRequired();
+        builder.Property(b => b.ModelYear).HasColumnName("ModelYear").IsRequired();
+        builder.Property(c => c.Plate).HasColumnName("Plate").IsRequired();
+        builder.Property(c => c.MinFindexScore).HasColumnName("MinFindexScore").IsRequired();
+
+        builder.Property(c => c.CreatedDate).HasColumnName("CreatedDate").IsRequired();
+        builder.Property(c => c.UpdatedDate).HasColumnName("UpdatedDate");
+        builder.Property(c => c.DeletedDate).HasColumnName("DeletedDate");
 
         builder.HasOne(b => b.Model);
 
