@@ -10,6 +10,9 @@
     <Folder Include="Features\Models\Commands\" />
     <Folder Include="Features\Models\Constants\" />
     <Folder Include="Features\Models\Rules\" />
+    <Folder Include="Features\Users\Commands\Delete\" />
+    <Folder Include="Features\Users\Commands\Update\" />
+    <Folder Include="Features\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +35,9 @@
     </Reference>
     <Reference Include="Core.Persistence">
       <HintPath>..\..\..\corePackages\Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Security">
+      <HintPath>..\..\..\corePackages\Core.Packages\Core.Security\bin\Debug\net7.0\Core.Security.dll</HintPath>
     </Reference>
   </ItemGroup>
 
